@@ -1,3 +1,3 @@
 provider "github" {
-  owner = "rrozic-gamed"
+  owner = var.repo_owner
 }

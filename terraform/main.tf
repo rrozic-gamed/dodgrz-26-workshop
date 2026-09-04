@@ -1,8 +1,11 @@
 resource "github_repository" "my_repo" {
-  name        = "my_repo"
-  description = "My new Repository"
-  visibility  = "private"
+  name        = var.repo_name
+  description = var.repo_description
+  visibility  = var.repo_visibility
+
+  lifecycle {
+    prevent_destroy = true
+  }
+
 }
-lifecycle {
-  prevent_destroy = true
-}
+
